@@ -86,7 +86,6 @@ def main():
 
 		#Send a TElegram notification
 		#Once we have 5 items in our bitcoin_history, send an update 
-		# if len(bitcoin_history) == 2 or 
 		if len(bitcoin_history) == 2 or len(ripple_history) == 2:
 			post_ifttt_webhook('bitcoin_price_update','ripple_price_update', format_bitcoin_history(bitcoin_history) , format_ripple_history(ripple_history))
 
@@ -95,7 +94,7 @@ def main():
 			ripple_history = []
 
 			#Sleep for 5 minutes
-			time.sleep(1*60)
+			time.sleep(5*60)
 
 	    
 if __name__=='__main__':
